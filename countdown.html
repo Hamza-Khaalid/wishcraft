@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown | WishCraft</title>
+    <link rel="stylesheet" href="countdown-page.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+
+    <div class="main">
+    <div class="countdown-container">
+        <h1 id="countdownEventTitle">Loading...</h1>
+        <p id="countdownMessage">Loading...</p>
+        <p id="countdownTimer">Calculating...</p>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <p>&copy; 2024 WishCraft. All rights reserved.</p>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        // On the countdown page, load the countdown based on the URL parameter
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const countdownID = urlParams.get('id');
+            
+            if (countdownID) {
+                const savedCountdown = JSON.parse(localStorage.getItem(countdownID));
+                if (savedCountdown) {
+                    document.getElementById('countdownEventTitle').textContent = savedCountdown.title;
+                    document.getElementById('countdownMessage').textContent = savedCountdown.message;
+                    startCountdown(parseInt(savedCountdown.date), 'countdownTimer');
+                } else {
+                    document.getElementById('countdownEventTitle').textContent = "Countdown not found.";
+                    document.getElementById('countdownMessage').style.display = 'none';
+                    document.getElementById('countdownTimer').style.display = 'none';
+                }
+            }
+        };
+
+        function startCountdown(countdownDate, elementId) {
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.getElementById(elementId).textContent = "Event Passed!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById(elementId).textContent = 
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            };
+
+            const interval = setInterval(updateCountdown, 1000);
+        }
+    </script>
+</body>
+</html>

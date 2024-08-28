@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #fda5a5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* nav:hover {
+    background-color: #d9534f;
+} */
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Hide the navigation links by default on small screens */
+.nav-links {
+    display: none;
+}
+
+/* Styling for the links */
+nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #ffe66d;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* .hamburger:hover {
+    transform: rotate(90deg);
+} */
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+/* Show the navigation links when the checkbox is checked */
+#nav-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ff6b6b;
+    width: 100%;
+    text-align: center;
+    transition: max-height 0.4s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+#nav-toggle:checked + .hamburger + .nav-links {
+    max-height: 300px; /* Adjust based on your content */
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+#nav-toggle:checked + .hamburger + .nav-links li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Countdown Section */
+.countdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.countdown-section h2 {
+    font-size: 28px;
+    color: #d61e1e;
+    margin-bottom: 20px;
+}
+
+/* Countdown Card */
+.countdown-card {
+    background-color: #ffe96bd2;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 30px;
+    padding-right: 35px;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+    border: 2px solid #ff6b6b;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.countdown-card h3 {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-family: 'Pacifico', cursive;
+}
+
+.countdown-card input[type="date"],
+.countdown-card input[type="text"],
+#messageInput {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.countdown-card button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.countdown-card button:hover {
+    background-color: #e55a5a;
+    transform: scale(1.05);
+}
+
+/* Countdown Display */
+#countdownDisplay {
+    background-color: #ffe96bd2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 25px;
+    padding: 30px;
+    padding-right: 35px;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+    border: 2px solid #ff6b6b;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#countdownDisplay p {
+    font-size: 24px;
+    color: #333;
+}
+
+#countdownTimer {
+    font-size: 32px;
+    color: #ff6b6b;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer .social-links, footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-links li, footer .footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social-links a, footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover, footer .footer-links a:hover {
+    color: #ffe66d;
+}
+
+/* Dialog Box */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    border: 2px solid #ff6b6b;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dialog input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.dialog button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dialog #copyLinkBtn {
+    background-color: #ff6b6b;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.dialog #copyLinkBtn:hover {
+    background-color: #e55a5a;
+    transform: scale(1.05);
+}
+
+.dialog #closeDialogBtn {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .countdown-card, #countdownDisplay {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .countdown-card h3, #countdownDisplay h3 {
+        font-size: 20px;
+    }
+
+    .countdown-card button, #countdownDisplay p {
+        font-size: 16px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

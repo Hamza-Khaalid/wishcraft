@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishCraft</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+        <!-- Navigation Bar --> 
+        <nav>
+            <div class="logo">WishCraft</div>
+            
+            <!-- Hamburger Menu Icon -->
+            <input type="checkbox" id="nav-toggle">
+            <div class="hamburger">
+                <label for="nav-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <!-- <li><a href="login.html">Login</a></li> -->
+            </ul>
+        </nav>
+    
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to WishCraft</h1>
+            <p>Create and send personalized wishes, track special moments, and much more.</p>
+            <!-- <button onclick="location.href='#signup'">Get Started</button> -->
+        </div>
+    </section>
+
+<!-- features section -->
+<section id="features">
+    <h2>Our Features</h2>
+    <div class="feature-line">
+        <a href="custom-birthday-wishes.html" class="feature-card">
+            <h3>Birthday Wishes</h3>
+            <p>Send personalized birthday cards with your unique touch.</p>
+        </a>
+        <a href="relationship-countdown.html" class="feature-card">
+            <h3>Event Countdown</h3>
+            <p>Track the countdown of upcoming events</p>
+        </a>
+        <a href="memory-scrapbook.html" class="feature-card">
+            <h3>Memory Scrapbook</h3>
+            <p>Create your very own scrapbook digitally</p>
+        </a>
+        <a href="polaroid.html" class="feature-card">
+            <h3>Virtual Polaroid</h3>
+            <p>Create beautiful virtual polaroid to capture those beautiful memories.</p>
+        </a>
+        <!-- <a href="wholesome-cards.html" class="feature-card">
+            <h3>Wholesome Cards</h3>
+            <p>Choose from a variety of cute and wholesome cards for every occasion.</p>
+        </a> -->
+    </div>
+</section>
+
+    
+<section id="about-us">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our website! We are dedicated to helping you celebrate special moments with personalized messages, reminders, and unique digital experiences. Our goal is to bring joy and connection to every relationship.</p>
+        <p>Our team is passionate about creativity, technology, and making your memories last a lifetime. Whether it's a birthday wish, a relationship countdown, or a beautiful digital scrapbook, we are here to make your celebrations memorable and meaningful.</p>
+        <p>Thank you for being part of our community. We look forward to celebrating life's special moments with you!</p>
+    </div>
+</section>
+
+<section id="contact-us">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xldrznrb" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+    <!-- User Dashboard -->
+    <!-- <section id="dashboard">
+        <h2>Your Dashboard</h2>
+        <div class="profile-overview">
+            <img src="Pictures/profile-pic.JPG" alt="Profile Picture">
+            <h3>Hamza Khalid</h3>
+            <p>Welcome back! Here's a summary of your activities.</p>
+        </div>
+        <div class="quick-actions">
+            <button>Create New Card</button>
+            <button>Set Reminder</button>
+            <button>View Countdown</button>
+        </div> -->
+        <!-- <div id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul id="activity-list">
+                    Activities will be dynamically added here
+                 </ul> -->
+            <!-- </div>
+        </div> -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <p>&copy; 2024 WishCraft. All rights reserved.</p>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

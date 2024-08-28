@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #fda5a5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* nav:hover {
+    background-color: #d9534f;
+} */
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Hide the navigation links by default on small screens */
+.nav-links {
+    display: none;
+}
+
+/* Styling for the links */
+nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #ffe66d;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* .hamburger:hover {
+    transform: rotate(90deg);
+} */
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+/* Show the navigation links when the checkbox is checked */
+#nav-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ff6b6b;
+    width: 100%;
+    text-align: center;
+    transition: max-height 0.4s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+#nav-toggle:checked + .hamburger + .nav-links {
+    max-height: 300px; /* Adjust based on your content */
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+#nav-toggle:checked + .hamburger + .nav-links li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+}
+
+/* Main and Section Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.card-creation {
+    background-color: #ffe66d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card-creation:hover {
+    transform: scale(1.05);
+}
+
+/* Card Preview Styling */
+.card-preview {
+    background-color: #ffe96bd2;
+    border: 2px dashed #ff6b6b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.card-preview:hover {
+    background-color: #ffe96d;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #d61e1e;
+    padding: 10px;
+    transition: color 0.4s ease;
+}
+
+h2:hover {
+    color: #ff6b6b;
+}
+
+.card-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-content img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Form Styling */
+#cardForm {
+    font-family: 'Pacifico', cursive;
+    text-align: left;
+}
+
+#cardForm label {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cardForm input[type="text"],
+#cardForm textarea,
+#cardForm select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+#cardForm input[type="text"]:focus,
+#cardForm textarea:focus,
+#cardForm select:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+#cardForm button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+#cardForm button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Responsive Card Creation */
+@media(max-width: 500px) {
+    .card-creation {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    #cardForm label {
+        font-size: 16px;
+    }
+
+    #cardForm input[type="text"],
+    #cardForm textarea,
+    #cardForm select {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    #cardForm button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.4s ease-in-out;
+}
+
+footer:hover {
+    background-color: #d9534f;
+}
+
+footer .social-links,
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-links li,
+footer .footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social-links a,
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links a:hover,
+footer .footer-links a:hover {
+    color: #ffe66d;
+    transform: scale(1.1);
+}
+
+/* Responsive Footer */
+@media(max-width: 500px) {
+    footer .social-links li,
+    footer .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}

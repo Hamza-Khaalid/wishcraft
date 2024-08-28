@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Countdown | WishCraft</title>
+    <link rel="stylesheet" href="countdown-styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WishCraft</div>
+
+  <!-- Hamburger Menu Icon -->
+  <input type="checkbox" id="nav-toggle">
+  <div class="hamburger">
+      <label for="nav-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+      </label>
+  </div>
+  
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#contact-us">Contact Us</a></li>
+                <!-- <li><a href="login.html">Login</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="countdown-section">
+            <h2>Track Your Special Milestones</h2>
+            <div class="countdown-card">
+                <h3 id="eventTitle">Your Special Countdown</h3>
+                <input type="date" id="eventDate" placeholder="Select your special date">
+                <input type="text" id="eventTitleInput" placeholder="Event Title">
+                <textarea id="messageInput" placeholder="Write a special message..."></textarea>
+                <button type="button" id="startCountdownBtn">Start Countdown</button>
+            </div>
+            
+            <div id="countdownDisplay" style="display: none;">
+                <h3 id="countdownEventTitle"></h3>
+                <p id="countdownTimer">Calculating...</p>
+            </div>
+
+            <div class="countdown-card" id="event-123456789">
+                <h3>Event Title</h3>
+                <p id="countdownTimer-event-123456789">Calculating...</p>
+                <button class="delete-btn" onclick="deleteCountdown('event-123456789')">Delete Countdown</button>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <p>&copy; 2024 WishCraft. All rights reserved.</p>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="dialogBox" class="dialog" style="display: none;">
+        <p>Your shareable link:</p>
+        <input type="text" id="shareLink" readonly>
+        <button id="copyLinkBtn">Copy Link</button>
+        <button id="closeDialogBtn">Close</button>
+    </div>
+
+    <script src="relationship-countdown.js"></script>
+</body>
+</html>

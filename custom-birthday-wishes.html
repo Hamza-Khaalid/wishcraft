@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Custom Birthday Wish | WishCraft</title>
+    <link rel="stylesheet" href="bdwish-styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WishCraft</div>
+
+  <!-- Hamburger Menu Icon -->
+  <input type="checkbox" id="nav-toggle">
+  <div class="hamburger">
+      <label for="nav-toggle" >
+          <div></div>
+          <div></div>
+          <div></div>
+      </label>
+  </div>
+  
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#contact-us">Contact Us</a></li>
+                <!-- <li><a href="login.html">Login</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card-creation">
+            <h2>Create Your Custom Birthday Wish</h2>
+            <div class="card-preview" id="cardPreview">
+                <div class="card-content">
+                    <h3 id="cardTitle">Happy Birthday!</h3>
+                    <p id="cardMessage">Wishing you a day filled with love and joy!</p>
+                    <img id="cardImage" src="graphics/default-cake.png" alt="Birthday Cake">
+                </div>
+            </div>
+
+            <form id="cardForm">
+                <label for="cardTitleInput">Title:</label>
+                <input type="text" id="cardTitleInput" placeholder="Enter the card title">
+
+                <label for="cardMessageInput">Message:</label>
+                <textarea id="cardMessageInput" placeholder="Enter your custom message"></textarea>
+
+                <label for="cardImageSelect">Choose an Image:</label>
+                <select id="cardImageSelect">
+                    <option value="graphics/default-cake.png">Birthday Cake</option>
+                    <option value="graphics/balloons.png">Balloons</option>
+                    <option value="graphics/gift.png">Gift Box</option>
+                </select>
+
+                <button type="button" id="createCardBtn">Create Card</button>
+            </form>
+        </section>
+    </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <p>&copy; 2024 WishCraft. All rights reserved.</p>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="birthday-wishes.js"></script>
+</body>
+</html>

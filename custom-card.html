@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Custom Card | WishCraft</title>
+    <link rel="stylesheet" href="card-styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+    <main>
+        <section class="card-creation">
+            <div class="card-preview">
+                <div class="card-content">
+                    <h3 id="cardTitle">Happy Birthday!</h3>
+                    <p id="cardMessage">Wishing you a day filled with love and joy!</p>
+                    <img id="cardImage" src="graphics/default-cake.png" alt="Birthday Cake">
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- Footer -->
+       <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <p>&copy; 2024 WishCraft. All rights reserved.</p>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const cardTitle = urlParams.get('title') || "Happy Birthday!";
+        const cardMessage = urlParams.get('message') || "Wishing you a day filled with love and joy!";
+        const cardImage = urlParams.get('image') || "graphics/default-cake.png";
+
+        // Update card content
+        document.getElementById('cardTitle').textContent = cardTitle;
+        document.getElementById('cardMessage').textContent = cardMessage;
+        document.getElementById('cardImage').src = cardImage;
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Scrapbook | WishCraft</title>
+    <link rel="stylesheet" href="memory-scrapbook-style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="fev/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fev/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fev/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+
+    <!-- Navigation Bar --> 
+    <nav>
+        <div class="logo">WishCraft</div>
+        <input type="checkbox" id="nav-toggle">
+        <div class="hamburger">
+            <label for="nav-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#about-us">About Us</a></li>
+            <li><a href="index.html#contact-us">Contact Us</a></li>
+            <!-- <li><a href="login.html">Login</a></li> -->
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Memory Scrapbook</h1>
+        <p>Create and save your visual memories.</p>
+    </header>
+
+    <main class="scrapbook-container">
+        <!-- Toolbar for adding elements -->
+        <div class="toolbar">
+            <input type="file" id="uploadPhotoBtn" accept="image/*" style="display: none;">
+            <button class="add-photo" id="triggerUploadPhotoBtn">Add Photo</button>
+            <button class="add-note" id="addNoteBtn">Add Note</button>
+            <!-- <button class="add-sticker" id="addStickerBtn">Add Sticker</button> -->
+        </div>
+
+        <!-- Scrapbook page area -->
+        <div class="scrapbook-page">
+            <!-- This is where users will drag and drop their items -->
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="navigation">
+            <button class="prev-page" id="previousPageBtn">Previous Page</button>
+            <button class="next-page" id="nextPageBtn">Next Page</button>
+            <button class="save-page" id="savePageBtn">Save Page</button>
+            <button class="delete-page" id="deletePageBtn">Delete Page</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul> -->
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+            <p>&copy; 2024 WishCraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="memory-scrapbook.js"></script>
+</body>
+</html>
