@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
 }
 
 nav .nav-links {
@@ -180,7 +181,7 @@ main {
 }
 
 h2 {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
     color: #d61e1e;
     padding: 10px;
     transition: color 0.4s ease;
@@ -209,12 +210,12 @@ h2:hover {
 
 /* Form Styling */
 #cardForm {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
     text-align: left;
 }
 
 #cardForm label {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
     font-size: 18px;
     color: #333;
     display: block;
