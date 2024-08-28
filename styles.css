@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 /* General Reset */
 * {
     margin: 0;
@@ -28,7 +29,7 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', 'Nerko One';
 }
 
 nav .nav-links {
