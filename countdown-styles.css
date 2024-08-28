@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', 'Nerko One';
 }
 
 nav .nav-links {
@@ -193,7 +194,7 @@ main {
     font-size: 24px;
     color: #ff6b6b;
     margin-bottom: 15px;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
 }
 
 .countdown-card input[type="date"],
@@ -249,7 +250,7 @@ main {
 #countdownTimer {
     font-size: 32px;
     color: #ff6b6b;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', sans-serif;
 }
 
 /* Footer */
