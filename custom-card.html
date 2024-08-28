@@ -46,7 +46,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const cardTitle = urlParams.get('title') || "Happy Birthday!";
         const cardMessage = urlParams.get('message') || "Wishing you a day filled with love and joy!";
-        const cardImage = urlParams.get('image') || "graphics/default-cake.png";
+        const cardImage = urlParams.get('image') || "default-cake.png";
 
         // Update card content
         document.getElementById('cardTitle').textContent = cardTitle;
