@@ -126,7 +126,7 @@ main{
 .hero p {
     font-size: 20px;
     margin-bottom: 20px;
-    opacity: 0;
+    opacity: 85%;
     transform: translateY(10px);
 }
 
