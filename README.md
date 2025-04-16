@@ -29,7 +29,7 @@
 - Learned how to build creative, themed experiences using basic front-end skills
 
 ## 📦 How to Run Locally
-```bash```
+```bash``` <br>
 git clone https://github.com/Hamza-Khaalid/wishcraft.git <br>
 cd wishcraft <br>
 open index.html <br>
