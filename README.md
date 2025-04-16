@@ -13,7 +13,7 @@
 
 ## 🌐 Live Demo
 
-👉 [WishCraft on Netlify]([https://wishcraft.vercel.app](https://wishcraft.netlify.app/))
+👉 [WishCraft on Netlify](https://wishcraft.netlify.app/)
 
 ## 🛠️ Tech Stack
 
@@ -29,10 +29,10 @@
 - Learned how to build creative, themed experiences using basic front-end skills
 
 ## 📦 How to Run Locally
-
-git clone https://github.com/Hamza-Khaalid/wishcraft.git
-cd wishcraft
-open index.html
+```bash```
+git clone https://github.com/Hamza-Khaalid/wishcraft.git <br>
+cd wishcraft <br>
+open index.html <br>
 
 ## 🙋‍♂️ About Me
 
